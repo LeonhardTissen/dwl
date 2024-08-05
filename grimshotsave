@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# sudo ln grimshotsave /bin/grimshotsave
+grimshot save area - | pinta /dev/stdin

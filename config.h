@@ -137,6 +137,11 @@ static const char *passwordcmd[] = { "keepassxc", NULL };
 static const char *codecmd[] = { "nvim", NULL };
 static const char *filecmd[] = { "thunar", NULL };
 static const char *shutdowncmd[] = { "poweroff", NULL };
+/*
+static const char *screenshotcmd[] = { "grimshot save area - | pinta /dev/stdin", NULL };
+*/
+static const char *screenshotcmd[] = { "grimshotsave", NULL };
+
 
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
@@ -149,6 +154,7 @@ static const Key keys[] = {
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_X,          spawn,          {.v = passwordcmd} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_C,          spawn,          {.v = codecmd} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_exclam,     spawn,          {.v = shutdowncmd} },
+	{ MODKEY,                    XKB_KEY_Print,      spawn,          {.v = screenshotcmd} },
 	{ MODKEY,                    XKB_KEY_j,          focusstack,     {.i = +1} },
 	{ MODKEY,                    XKB_KEY_k,          focusstack,     {.i = -1} },
 	{ MODKEY,                    XKB_KEY_i,          incnmaster,     {.i = +1} },
