@@ -34,7 +34,7 @@ static const Layout layouts[] = {
 	{ "[]=",      tile },
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
-	{ "888",      grid },
+	{ "[][",      grid },
 };
 
 /* monitors */
