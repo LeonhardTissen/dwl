@@ -135,7 +135,7 @@ static const char *discordcmd[] = { "flatpak", "run", "dev.vencord.Vesktop", NUL
 /* static const char *discordcmd[] = { "discord", NULL }; */
 static const char *passwordcmd[] = { "keepassxc", NULL };
 static const char *codecmd[] = { "nvim", NULL };
-static const char *filecmd[] = { "thunar", NULL };
+static const char *filecmd[] = { "pcmanfm", NULL };
 static const char *shutdowncmd[] = { "poweroff", NULL };
 /*
 static const char *screenshotcmd[] = { "grimshot save area - | pinta /dev/stdin", NULL };
