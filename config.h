@@ -134,7 +134,7 @@ static const char *browsercmd[] = { "librewolf", NULL };
 static const char *discordcmd[] = { "flatpak", "run", "dev.vencord.Vesktop", NULL };
 /* static const char *discordcmd[] = { "discord", NULL }; */
 static const char *passwordcmd[] = { "keepassxc", NULL };
-static const char *codecmd[] = { "nvim", NULL };
+static const char *codecmd[] = { "code", NULL };
 static const char *filecmd[] = { "pcmanfm", NULL };
 static const char *shutdowncmd[] = { "poweroff", NULL };
 /*
