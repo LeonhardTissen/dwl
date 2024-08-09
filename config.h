@@ -31,10 +31,10 @@ static const Rule rules[] = {
 /* layout(s) */
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
-	{ "[][",      grid },
+	{ "[]=",      tile },    /* MOD-T */
+	{ "><>",      NULL },    /* MOD-F - no layout function means floating behavior */
+	{ "[M]",      monocle }, /* MOD-M */
+	{ "[][",      grid },    /* MOD-G */
 };
 
 /* monitors */
@@ -53,11 +53,11 @@ static const MonitorRule monrules[] = {
 	*/
 	/* defaults */
     /* Left Monitor */
-    { "DP-1",       0.55f, 1,      1,    &layouts[0], WL_OUTPUT_TRANSFORM_NORMAL, 1920, 0, 0, 0, 144.000f, 1, 1 },
-    /* Center Monitor */
-    { "DP-2",       0.55f, 1,      1,    &layouts[0], WL_OUTPUT_TRANSFORM_NORMAL, 3840, 0, 0, 0, 144.000f, 1, 1 },
-    /* Right Monitor */
     { "DP-3",       0.55f, 1,      1,    &layouts[0], WL_OUTPUT_TRANSFORM_NORMAL,    0, 0, 0, 0, 144.000f, 1, 1 },
+    /* Center Monitor */
+    { "DP-1",       0.55f, 1,      1,    &layouts[2], WL_OUTPUT_TRANSFORM_NORMAL, 1920, 0, 0, 0, 144.000f, 1, 1 },
+    /* Right Monitor */
+    { "DP-2",       0.55f, 1,      1,    &layouts[2], WL_OUTPUT_TRANSFORM_NORMAL, 3840, 0, 0, 0, 144.000f, 1, 1 },
     /* Fallback Rule */
     { NULL,         0.55f, 1,      1,    &layouts[0], WL_OUTPUT_TRANSFORM_NORMAL,   -1,-1, 0, 0, 60.000f, 1, 1 },
 };
@@ -137,17 +137,14 @@ static const char *termcmd[] = { "kitty", NULL };
 */ 
 static const char *termcmd[] = { "alacritty", NULL };
 static const char *menucmd[] = { "wmenu-run", NULL };
-/* static const char *browsercmd[] = { "firefox", NULL }; */
-static const char *browsercmd[] = { "librewolf", NULL };
+/* static const char *browsercmd[] = { "librewolf", NULL }; */
+static const char *browsercmd[] = { "firefox", NULL };
 static const char *discordcmd[] = { "flatpak", "run", "dev.vencord.Vesktop", NULL };
 /* static const char *discordcmd[] = { "discord", NULL }; */
 static const char *passwordcmd[] = { "keepassxc", NULL };
 static const char *codecmd[] = { "code", NULL };
 static const char *filecmd[] = { "pcmanfm", NULL };
 static const char *shutdowncmd[] = { "poweroff", NULL };
-/*
-static const char *screenshotcmd[] = { "grimshot save area - | pinta /dev/stdin", NULL };
-*/
 static const char *screenshotcmd[] = { "grimshotsave", NULL };
 
 
